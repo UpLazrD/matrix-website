@@ -53,10 +53,27 @@ canvas {
     border-right: 1px solid rgb(0, 77, 0);
 }
 
+.signature {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    color: rgb(85, 85, 85);
+    font-size: 12px;
+    width: 250px;
+    background-color: black;
+    border: 1px solid green;
+    
+}
+
 .command {
     padding: 5px;
 }
-.window a {
+span {
+    text-decoration: underline;
+    font-size: 14px;
+} 
+
+a {
     text-decoration: none; 
     color: inherit
 }
