@@ -7,7 +7,7 @@
 var music_played = false;
 function let_the_music_play(){
   if (!music_played) {
-    audio = new Audio("soundtrack.mp3");
+    audio = new Audio("media/soundtrack.mp3");
     audio.play();
     music_played = true;
   }
