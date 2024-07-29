@@ -23,6 +23,7 @@ canvas {
     margin-left: auto;
     margin-right: auto;
     display: 1;
+    position: absolute;
 }
 
 .border {
