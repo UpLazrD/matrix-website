@@ -1,21 +1,47 @@
+// Перемещение окна
+dragElement(document.getElementById("window"));
 
-    const windowElement = document.querySelector('.window');
-    const borderElement = document.querySelector('.border');
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "border")) {
+    document.getElementById(elmnt.id + "border").onmousedown = dragMouseDown;
+  } else {
+    elmnt.onmousedown = dragMouseDown;
+  }
 
-    let offsetX, offsetY;
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    document.onmousemove = elementDrag;
+  }
 
-    borderElement.onmousedown = (e) => {
-        const rect = windowElement.getBoundingClientRect();
-        offsetX = e.clientX - rect.left;
-        offsetY = e.clientY - rect.top;
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
 
-        document.onmousemove = (e) => {
-            windowElement.style.left = (e.clientX - offsetX) + 'px';
-            windowElement.style.top = (e.clientY - offsetY) + 'px';
-        };
+  function closeDragElement() {
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
 
-        document.onmouseup = () => {
-            document.onmousemove = null;
-            document.onmouseup = null;
-        };
-    };
+// Кнопки окна
+function hideTerminal() {
+    document.getElementById('terminal').style.display = 'none';
+    document.getElementById('border').style.borderBottom = '1px solid rgb(0, 77, 0)';
+}
+
+function showTerminal() {
+    document.getElementById('terminal').style.display = 'block';
+    document.getElementById('border').style.borderBottom = '';
+}

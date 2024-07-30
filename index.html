@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,13 +9,13 @@
     <meta http-equiv="Expires" content="0">
     <title>~$ GOIDA PROTOCOL</title>
     <link rel="SHORTCUT ICON" href="media/ts-logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="styles.css?ver=3">
+    <link rel="stylesheet" href="styles.css?ver=4">
 </head>
 <body>
     
-    <div class="window" style="position: relative;">
-    <div class="border">             $ GOIDA PROTOCOL (uplazrd@terminal:~/unf)     <a href="#" onclick="document.querySelector('.terminal').style.display='none'; document.querySelector('.border').style.borderBottom = '1px solid rgb(0, 77, 0)';"> — </a><a href="#" onclick="document.querySelector('.terminal').style.display = 'block'; document.querySelector('.border').style.borderBottom = '';"> ▭ <a style="color: darkred;" href="#" onclick="window.close();"> x </a></div>
-    <div class="terminal">
+    <div id="window" style="position: relative;">
+    <div id="border">             $ GOIDA PROTOCOL (uplazrd@terminal:~/unf)     <a href="#" onclick="hideTerminal()"> — </a><a href="#" onclick="showTerminal()"> ▭ </a><a style="color: darkred;" href="#" onclick="window.close();"> x </a></div>
+    <div id="terminal">
         </script>
         <div class="command">
             <div><cu>uplazrd@terminal:~</cu> <cp>$ ls -a</cp></div>
