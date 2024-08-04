@@ -1,0 +1,51 @@
+/* Главные стили */
+body {
+    background-color: black;
+    font-family: 'Courier New', Courier, monospace;
+    overflow: hidden;
+    height: 100vh;
+    margin: 0;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1; /* На фоне */
+    opacity: 1
+}
+/* -------------- */
+
+
+/* Иные стили */
+a {
+    text-decoration: none; 
+    color: inherit
+}
+
+span {
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+cp {
+    color: gray;
+}
+
+cu {
+    color: green;
+}
+
+red {
+    color: darkred;
+}
+
+bluem {
+    color: black;
+    background-color: rgb(0, 110, 255);
+}
+redm {
+    color: darkred;
+    background-color: rgb(0, 110, 255);
+}
+/* -------------- */
