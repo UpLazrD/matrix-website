@@ -53,7 +53,7 @@ document.addEventListener('keydown', function(event) {
   if (event.key === 'F' ) {
       terminal.innerHTML = "Информация для клавиши F";
       // Добавьте вывод информации для F здесь
-  } else if (event.key === 'Z') {
+  } else if (event.key === 'z' || event.key === 'Z' || event.key === 'я' || event.key === 'Я') {
       terminal.innerHTML = "Информация для клавиши Z";
       // Добавьте вывод информации для Z здесь
   } else if (event.key === 'q' || event.key === 'Q' || event.key === 'й' || event.key === 'Й') {
