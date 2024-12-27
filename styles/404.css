@@ -1,0 +1,43 @@
+body, html {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, #003f3f, #001f1f);
+    color: white;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.image {
+    width: 30%;
+    height: auto;
+    margin-right: 150px;
+}
+.text {
+    text-align: left;
+}
+.error {
+    font-size: 100px;
+}
+.message {
+    font-size: 24px;
+    margin: 20px 0;
+    animation: change 3s infinite;
+}
+.return-box { 
+    margin-top: 80px;
+}
+.return {
+    font-size: 18px;
+    margin-top: 5px;
+    cursor: pointer;
+    color: #00ffff;
+    white-space: pre;
+}
